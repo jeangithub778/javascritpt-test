@@ -1,14 +1,36 @@
+var smallBox = document.getElementById("smallBox");
+var containerSection = document.getElementById("containerSection");
+var fullSectionWidth = containerSection.clientWidth; 
+var leftSide = containerSection.offsetLeft; 
+var rightSide = containerSection.offsetRight; 
+var smallBoxPos = leftSide; 
+
+
+
+
+window.addEventListener("resize", calculateBrowserMetrics);
+
+function calculateBrowserMetrics(){
+
+	       console.log("the window is being resized");
+
+	 smallBox = document.getElementById("smallBox");
+	 containerSection = document.getElementById("containerSection");
+	 fullSectionWidth = containerSection.clientWidth; 
+	 leftSide = containerSection.offsetLeft; 
+	 rightSide = containerSection.offsetRight; 
+	 smallBoxPos = leftSide; 
+
+}
+
+
+
 
 startAnimation();
 
 function startAnimation(){
 
-	var smallBox = document.getElementById("smallBox");
-	var containerSection = document.getElementById("containerSection");
-	var fullSectionWidth = containerSection.clientWidth; 
-	var leftSide = containerSection.offsetLeft; 
-	var rightSide = containerSection.offsetRight; 
-	var smallBoxPos = leftSide; 
+
 
 	//var fullSectionWidth = 1140; 
 	
@@ -41,7 +63,6 @@ function startAnimation(){
 	function reverseBlock(){
 		smallBox.style.left = smallBoxPos+'px';
 		smallBoxPos--;
-		//console.log(fullSectionWidth);
 
         if (smallBoxPos === leftSide){
            clearInterval(interval);
