@@ -12,14 +12,13 @@ window.addEventListener("resize", calculateBrowserMetrics);
 
 function calculateBrowserMetrics(){
 
-	       console.log("the window is being resized");
+	 console.log("the window is being resized");
 
 	 smallBox = document.getElementById("smallBox");
 	 containerSection = document.getElementById("containerSection");
 	 fullSectionWidth = containerSection.clientWidth; 
 	 leftSide = containerSection.offsetLeft; 
 	 rightSide = containerSection.offsetRight; 
-	 smallBoxPos = leftSide; 
 
 }
 
@@ -63,6 +62,7 @@ function startAnimation(){
 	function reverseBlock(){
 		smallBox.style.left = smallBoxPos+'px';
 		smallBoxPos--;
+		console.log(leftSide);
 
         if (smallBoxPos === leftSide){
            clearInterval(interval);
