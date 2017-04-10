@@ -1,0 +1,17 @@
+body{
+	background-color:blue;
+}
+
+section{
+	width:80%;
+	background-color:white;
+	margin:10% auto;
+	height:500px;
+}
+
+#smallBox{
+	position:absolute;
+	height:20px;
+	width:20px;
+	background-color:red;
+}
