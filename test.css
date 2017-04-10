@@ -5,7 +5,8 @@ body{
 section{
 	width:80%;
 	background-color:white;
-	margin:10% auto;
+	margin-top:10%;
+	margin-left:10%;
 	height:500px;
 }
 
@@ -15,3 +16,4 @@ section{
 	width:20px;
 	background-color:red;
 }
+
